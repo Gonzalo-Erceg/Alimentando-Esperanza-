@@ -9,8 +9,7 @@ body {
 /* Cabecera */
 header {
     background-color: #82B3B4;
-    padding: 20px;
-    text-align: center;
+    text-align: end;
 }
 
 header nav a {
@@ -31,11 +30,16 @@ header button:hover {
     background-color: #658d70;
 }
 
+.preseccion {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
 /* Sección Principal */
 .main {
     background-color: white;
     text-align: center;
-    padding: 50px 0;
 }
 
 .main img {
@@ -62,7 +66,7 @@ header button:hover {
 
 /* Sección Nuestra Misión */
 .section {
-    background-color: #D6D2A5;
+    background-color: #C8CFA0;
     padding: 50px;
     display: flex;
     justify-content: space-between;
@@ -87,7 +91,7 @@ header button:hover {
 
 /* Sección Nuestro Objetivo */
 .section2 {
-    background-color: #E4B06D;
+    background-color: #FCDC94;
     padding: 50px;
     display: flex;
     justify-content: space-between;
@@ -125,7 +129,7 @@ header button:hover {
 
 /* Sección Equipo */
 .equipo {
-    background-color: #F1A97A;
+    background-color: #FDAF7C;
     padding: 50px;
     text-align: center;
 }

@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <link rel="stylesheet" href="style.css">
   <body>
-    <script src="src/index.js"></script>
     <header>
       <nav>
           <a href="#">Blog</a>
@@ -17,11 +16,16 @@
           <a href="#">Colabora</a>
           <button style="background-color: #7DA78D; color: white; border: none; padding: 10px 20px; cursor: pointer;">Regístrate</button>
       </nav>
+    </header>
       <div class="main">
-        <img src="./public/img/logo.png" alt="Logo de Alimentando Esperanzas">
-        <h1>Alimentando Esperanzas</h1>
-        <p>Solidaridad que viste y alimenta</p>
-        <button>DONA</button>
+        <div class="preseccion">
+          <img src="./public/img/logo.png" alt="Logo de Alimentando Esperanzas">
+          <div class="">
+            <h1>Alimentando Esperanzas</h1>
+            <p>Solidaridad que viste y alimenta</p>
+            <button>DONA</button>
+          </div>
+        </div>
         <div class="section">
           <div>
               <h2>Nuestra Misión</h2>
@@ -55,9 +59,8 @@
               <a href="#"><img src="./public/img/youtube.png" alt="YouTube"></a>
               <a href="#"><img src="./public/img/gmail.png" alt="Email"></a>
           </div>
-          <p>@alimentando.esperanzas</p>
       </footer>
     </div>
-  </header>
+  <script src="src/index.js" type="module"></script>
   </body>
 </html>
