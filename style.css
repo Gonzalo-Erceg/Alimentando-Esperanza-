@@ -100,6 +100,7 @@ header button:hover {
 .section img {
     width: 40%;
     border-radius: 10px;
+    margin: 20px;
 }
 
 .section h2 {
@@ -122,9 +123,18 @@ header button:hover {
     align-items: center;
 }
 
-.section2 img {
-    width: 40%;
+.section2 .imgconteiner{
+    width: 70%;
+    height: auto;
     border-radius: 10px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.section2 img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .section2 h2 {
