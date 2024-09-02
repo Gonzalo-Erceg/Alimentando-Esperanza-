@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comederos</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Comedores</a></li>
-                <li><a href="#">Colabora</a></li>
-            </ul>
-            <a href="#" class="button" button-align-rigth>Regístrate</a>
+            <div class="logo-nav">
+              <img class="img-logo-nav" src="img/layer1.png" alt="Logo de Alimentando Esperanzas">
+            </div>
+            <div class="nav-right">
+                <a href="#">Blog</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Comedores</a>
+                <a href="#">Colabora</a>
+                <button style="background-color: #7DA78D; color: white; border: none; padding: 10px 20px; cursor: pointer;">Regístrate</button>
+            </div>
         </nav>
     </header>
 
@@ -23,35 +27,80 @@
         <section class="comedores">
             <h1>Comedores</h1>
             <p>Nuestros comedores se extienden por la Comuna 4 en la Capital Federal de Argentina</p>
-            <div class="mapa">Posible Mapa de Comuna 4</div>
+            <div id="map" style="height: 200px; width: 60%;"></div>
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <script>
+            var map = L.map('map').setView([-34.6500, -58.3833], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            L.marker([-34.6350755,-58.3769192]).addTo(map)
+                .bindPopup('Comedor Santa Lucia de Barracas')
+                .openPopup();
+            L.marker([-34.6353673, -58.3588029]).addTo(map)
+                .bindPopup('Comedor Centro Comunitario Ciudadanitos')
+                .openPopup();
+            L.marker([-34.6449516, -58.3995049]).addTo(map)
+                .bindPopup('Comedor Centro Comunitario Ciudadanitos')
+                .openPopup();
+             </script>
         </section>
 
-        <section class="comedor">
+        <section class="comedor-cont">
             <h2>Comedor Santa Lucía de Barracas</h2>
-            <div class="img"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae purus sit amet neque venenatis sagittis. Suspendisse potenti.</p>
+            <div class="comedor">
+                <img src="img/santalucia.png" alt="santa lucia de barracas">
+                <div>
+                    <p>El Comedor Santa Lucía de Barracas es un comedor comunitario ubicado en el barrio de Barracas, en la Ciudad Autónoma de Buenos Aires, Argentina. Este tipo de espacio social tiene la misión de proporcionar asistencia alimentaria y contención social a personas en situación de vulnerabilidad.El comedor tiene como objetivo principal ofrecer comida gratuita o a bajo costo a quienes lo necesiten, especialmente a familias con niños, adultos mayores, y personas sin hogar. Además de brindar asistencia alimentaria, el comedor busca crear un ambiente de apoyo y contención para las personas de la comunidad, funcionando como un espacio de encuentro y solidaridad. Los servicios que ofrecen son los siguientes:</p>
+                    <ul>
+                        <li>Comidas diarias: Se sirven desayunos, almuerzos, y meriendas para personas que enfrentan inseguridad alimentaria.</li>
+                        <li>Asistencia social: El comedor puede proporcionar orientación en relación a trámites sociales, ayuda para acceder a servicios médicos básicos, y apoyo emocional.</li>
+                        <li>Talleres y actividades recreativas: A menudo se organizan actividades educativas, culturales, y recreativas, especialmente para niños y adolescentes.</li>
+                        <li>Distribución de ropa y artículos de primera necesidad: Además de alimentos, el comedor también puede distribuir ropa, calzado, artículos de higiene personal, y otros elementos esenciales para las familias más necesitadas.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section class="comedor">
+        <section class="comedor-cont">
             <h2>Comedor Centro Comunitario Ciudadanitos</h2>
-            <div class="img"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae purus sit amet neque venenatis sagittis. Suspendisse potenti.</p>
+            <div class="comedor">
+                <img src="img/ciudadanito.webp" alt="centro comunitario ciudadanitos">
+                <div>
+                    <p>El Centro Comunitario Ciudadanitos es un comedor comunitario ubicado en Olavarría 250, en el barrio de La Boca, en la Ciudad Autónoma de Buenos Aires, Argentina. Este tipo de centros suele estar dedicado a brindar apoyo alimentario, social, y educativo a personas y familias en situación de vulnerabilidad. Los servicios que ofrece este comedero son los siguientes: </p>
+                    <ul>
+                        <li>Comedor: Proporciona comidas diarias o semanales a personas necesitadas, especialmente niños, personas mayores y familias en situación de riesgo.</li>
+                        <li>Apoyo educativo: En muchos centros, como el de Ciudadanitos, se ofrecen actividades educativas, como apoyo escolar, talleres de alfabetización, clases de arte o informática, entre otros.</li>
+                        <li>Contención social: Estos centros suelen ser lugares de reunión y de apoyo emocional, proporcionando un espacio seguro para que la comunidad se reúna, participe en actividades recreativas, y reciba orientación y asistencia.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section class="comedor">
+        <section class="comedor-cont">
             <h2>Comedor Cooperativa Amanecer de los Cartoneros - MTE/CTEP</h2>
-            <div class="img"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae purus sit amet neque venenatis sagittis. Suspendisse potenti.</p>
+            <div class="comedor">
+                <img src="img/amanecer.webp" alt="cooperativa amanecer de los cartoneros">
+                <div>
+                    <p>El Comedor Cooperativa Amanecer de los Cartoneros - MTE/CTEP, ubicado en José A. Cortejarena 3151, en la Ciudad Autónoma de Buenos Aires, es una iniciativa vinculada al Movimiento de Trabajadores Excluidos (MTE) y a la Confederación de Trabajadores de la Economía Popular (CTEP), organizaciones que agrupan a trabajadores de la economía informal y popular en Argentina. El comedor tiene como principal objetivo brindar apoyo alimentario a personas en situación de vulnerabilidad, particularmente a aquellos que forman parte de la comunidad cartonera o recicladora y se centra en proporcionar alimentos nutritivos a familias, niños, adultos mayores y cualquier persona que necesite asistencia alimentaria en el barrio. Los servicios que ofrecen son los siguientes:</p>
+                    <ul>
+                        <li>Alimentación comunitaria: Ofrecen comidas gratuitas o a bajo costo a personas en situación de vulnerabilidad social.</li>
+                        <li>Espacio de encuentro: Funciona como un lugar de encuentro para los trabajadores recicladores (cartoneros) y sus familias, promoviendo la integración y el fortalecimiento comunitario.</li>
+                        <li>Talleres y capacitación: A menudo se organizan talleres de formación para promover habilidades laborales, educativas y de reciclaje.</li>
+                        <li>Asistencia social y apoyo emocional: Se ofrece contención y acompañamiento a las familias que atraviesan situaciones de necesidad.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>Nuestras redes:</p>
-        <div class="redes">
-            <a href="#"><img src="instagram.png" alt="Instagram">@Alimentando.esperanzas</a>
-            <a href="#"><img src="facebook.png" alt="Facebook">Alimentando.esperanzas</a>
-            <a href="#"><img src="youtube.png" alt="Youtube">AlimentandoEsperanzas</a>
-            <a href="mailto:alimentando.esperanza@gmail.com"><img src="gmail.png" alt="Email">alimentando.esperanza@gmail.com</a>
+        <div class="social">
+            <a href="#"><img class="icono" src="img/instagram.png" alt="Instagram">@alimentandoesperanzas</a>
+            <a href="#"><img class="icono" src="img/facebook.png" alt="Facebook">@alimentandoesperanzas</a>
+            <a href="#"><img class="icono" src="img/youtube.png" alt="YouTube">@alimentandoesperanzas</a>
+            <a href="#"><img class="icono" src="img/gmail.png" alt="Email">@alimentandoesperanzas</a>
         </div>
     </footer>
 </body>
