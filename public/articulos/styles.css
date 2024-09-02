@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #C8CFA0;
+}
+
+.article .image img {
+    max-width: 100px;  /* Establece un ancho máximo para todas las imágenes */
+    max-height: 100px; /* Establece una altura máxima para todas las imágenes */
+    margin-right: 20px;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del espacio */
+}
+
+.article .text h2 {
+    margin: 0;
+    color: #4F4F4F;
+}
+
+.article .text p {
+    margin: 5px 0 0;
+    color: #7F7F7F;
+}
+
+/* Cabecera */
+header {
+    background-color: #82B3B4;
+    text-align: end;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+header nav .logo-nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav .logo-nav img {
+    height: 30px;
+}
+
+header button {
+    background-color: #7DA78D;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #658d70;
+}
+
+/* Pie de página */
+footer {
+    background-color: #82B3B4;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer .social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+footer .social a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icono {
+    width: 30px;
+}
