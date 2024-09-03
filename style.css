@@ -173,42 +173,30 @@ header button:hover {
     margin-bottom: 30px;
 }
 
-.fotos1 {
+.fotos {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap; 
+    margin-bottom: 20px;
 }
 
-.fotos1 img{
+.fotos div{
     width: 150px;
     height: 150px;
-    background-color: #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    border-radius: 10px;
+
+    
+
+    
+}
+.fotos div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+
 }
 
-.fotos2 {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; 
-    margin-top:20px;
-}
-
-.fotos2 img{
-    width: 150px;
-    height: 150px;
-    background-color: #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    border-radius: 10px;
-} 
 
 /* Pie de Página */
 footer {
